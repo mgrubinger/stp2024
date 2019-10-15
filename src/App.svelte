@@ -2,7 +2,7 @@
 	import humanizeDuration from 'humanize-duration';
 	import FpsCtrl from './fpsctrl'
 	
-	let target = new Date("2019-11-10 10:00");
+	let target = new Date("2019-12-10 10:00");
 	let timeLeft = 0;
 	$: timeLeftHuman = humanizeDuration(timeLeft, { language: 'de', spacer: ' ', delimiter: "<br/>", round: true , units: ['y', 'mo', 'w', 'd', 'h', 'm', 's', 'ms'] });
 	
