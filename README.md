@@ -4,12 +4,12 @@
 
 # svelte app
 
-This is a project template for [Svelte](https://svelte.technology) apps. It lives at https://github.com/sveltejs/template.
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template-webpack svelte-app
+npx degit sveltejs/template svelte-app
 cd svelte-app
 ```
 
@@ -33,6 +33,8 @@ npm run dev
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
+By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+
 
 ## Deploying to the web
 
@@ -47,6 +49,7 @@ npm install -g now
 Then, from within your project folder:
 
 ```bash
+cd public
 now
 ```
 
