@@ -13,11 +13,13 @@
   },
   "dependencies": {
     "humanize-duration": "^3.21.0",
-    "puppeteer": "^1.20.0",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
-    "prebuild": "cd functions/function-image && npm i",
+    "prezip": "rm -rf functions-build && mkdir functions-build",
+    "zip": "cd functions/function-image && npm install && chmod -R 777 node_modules && zip -r function-image.zip *",
+    "postzip": "mv functions/function-image/function-image.zip functions-build",
+    "prebuild": "npm run zip",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
