@@ -17,6 +17,7 @@
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
+    "prebuild": "cd functions/function-image && npm i",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
