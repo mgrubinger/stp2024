@@ -15,10 +15,17 @@
 // }
 
 const chromium = require('chrome-aws-lambda')
+const puppeteer = require('puppeteer-core')
 
 exports.handler = async (event, context) => {
   try {
-    let browser = await chromium.puppeteer.launch({ headless: true });
+    const executablePath = await chromium.executablePath
+    let browser = await puppeteer.launch({ 
+      args: chromium.args,
+      executablePath: executablePath,
+      headless: chromium.headless
+    });
+    
     let page = await browser.newPage();
     
     await page.setViewport({ width: 1024, height: 620 });
