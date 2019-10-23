@@ -45,7 +45,7 @@ a {
 	text-decoration: underline;
 }
 
-.nope {
+.yep {
 	font-size: 5rem;
 	line-height: 1.1em;
 	font-weight: 700;
@@ -63,7 +63,7 @@ a {
 <main>
 
 	<h1>Wird St. Pölten<br/>Kulturhauptstadt 2024?</h1>
-	<p class="nope">Nein. 😢</p>
+	<p class="yep">JA! 🎉🎉🎉</p>
 
 </main>
 <footer>
