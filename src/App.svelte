@@ -1,20 +1,5 @@
 <script>
-	import humanizeDuration from 'humanize-duration';
-	import FpsCtrl from './fpsctrl'
 	
-	let target = Date.parse("2019-11-12T10:00:00");
-	let timeLeft = 0;
-	$: timeLeftHuman = humanizeDuration(timeLeft, { language: 'de', spacer: ' ', delimiter: "<br/>", round: true , units: ['y', 'mo', 'w', 'd', 'h', 'm', 's', 'ms'] });
-
-	const calcTimeleft = () => {
-		timeLeft = target - new Date();
-	};
-
-	// create a new FpsCtrl and start it
-	var fc = new FpsCtrl(24, function(e) {
-		calcTimeleft();
-	});
-	fc.start();
 	
 </script>
 
@@ -60,12 +45,16 @@ a {
 	text-decoration: underline;
 }
 
+.nope {
+	font-size: 5rem;
+	line-height: 1.1em;
+	font-weight: 700;
+	margin-top: 3rem;
+}
+
 @media screen and (max-width: 380px) {
 	main {
 		margin: 10px;
-	}
-	.time {
-		font-size: 2.3rem;
 	}
 }
 
@@ -74,8 +63,7 @@ a {
 <main>
 
 	<h1>Wird St. Pölten<br/>Kulturhauptstadt 2024?</h1>
-	<p>Sie erfahren es auf dieser Seite, und zwar in:</p>
-	<h2 class="time">{@html timeLeftHuman}</h2>
+	<p class="nope">Nein. 😢</p>
 
 </main>
 <footer>
