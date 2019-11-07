@@ -63,8 +63,7 @@ a {
 <main>
 
 	<h1>Wird St. Pölten<br/>Kulturhauptstadt 2024?</h1>
-	<p class="yep">JA! 🎉🎉🎉</p>
-
+	<p class="nope">Nein. 😢 </p>
 </main>
 <footer>
 	A project by <a href="https://www.grooovinger.com" rel="noopener">grooovinger</a>
